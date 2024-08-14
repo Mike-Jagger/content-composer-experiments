@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import MovieCard from "./MovieCard";
 import "./MovieApp.css";
 import SearchIcon from "./search.svg";
 
