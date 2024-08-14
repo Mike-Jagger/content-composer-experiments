@@ -43,29 +43,8 @@ const MovieApp = () => {
 				/>
 				<img src={SearchIcon} alt="Search" onClick={() => {}} />
 			</div>
-
 			<div className="container">
-				<div className="movie">
-					<div>
-						<p>{testMovie.Title}</p>
-					</div>
-
-					<div>
-						<img
-							src={
-								testMovie.Poster !== "N/A"
-									? testMovie.Poster
-									: "https://via.placeholder.com/400"
-							}
-							alt={testMovie.Title}
-						/>
-					</div>
-
-					<div>
-						<span>{testMovie.Type}</span>
-						<h3>{testMovie.Title}</h3>
-					</div>
-				</div>
+				<MovieCard movieData={testMovie} />
 			</div>
 		</div>
 	);
