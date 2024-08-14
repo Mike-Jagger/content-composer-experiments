@@ -25,6 +25,15 @@ const MovieApp = () => {
 		<div className="app">
 			<h1>Movie App</h1>
 			{/* <p style={{ color: "white" }}>{requestCount}</p> */}
+
+			<div className="search">
+				<input
+					placeholder="Search for movies"
+					value="Spiderman"
+					onChange={() => {}}
+				/>
+				<img src={SearchIcon} alt="Search" onClick={() => {}} />
+			</div>
 		</div>
 	);
 };
