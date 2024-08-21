@@ -8,7 +8,7 @@ const experimentToRun = null;
 function experimentToRender(experiment) {
 	switch (experiment) {
 		case "movieApp":
-			const MovieApp = require("./simpleApp/MovieApp.jsx").default;
+			const MovieApp = require("./movieApp/MovieApp.jsx").default;
 			return <MovieApp />;
 		case "dashboardApp":
 			const DashboardApp = require("./tailwind/DashboardApp").default;
