@@ -6,10 +6,12 @@ import MovieApp from "./simpleApp/MovieApp";
 // import HightlightEffects from "./highlighting/HighlightEffects";
 // import Experiment from "./composerEngine/Experiment";
 import reportWebVitals from "./reportWebVitals";
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const experimentToRun = process.env;
+
 root.render(
 	<React.StrictMode>
+		{}
 		<MovieApp />
 	</React.StrictMode>
 );
