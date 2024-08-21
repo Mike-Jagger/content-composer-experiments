@@ -19,8 +19,6 @@ const MovieApp = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 
 	const searchMovies = async (title) => {
-		// setRequestCount(requestCount + 1);
-
 		const response = await fetch(`${API_URL}&s=${title}`);
 
 		const data = await response.json();
@@ -28,14 +26,9 @@ const MovieApp = () => {
 		setMovies(data.Search);
 	};
 
-	useEffect(() => {
-		// searchMovies("spiderman");
-	}, []);
-
 	return (
 		<div className="app">
 			<h1>Movie App</h1>
-			{/* <p style={{ color: "white" }}>{requestCount}</p> */}
 
 			<div className="search">
 				<input
@@ -50,7 +43,7 @@ const MovieApp = () => {
 				/>
 			</div>
 
-			{movies.length > 0 ? (
+			{movies?.length > 0 ? (
 				<div className="container">
 					{movies.map((movie) => {
 						return <MovieCard movieData={movie} />;
