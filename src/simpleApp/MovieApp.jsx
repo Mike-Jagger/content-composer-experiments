@@ -15,6 +15,7 @@ const testMovie = {
 
 const MovieApp = () => {
 	// const [requestCount, setRequestCount] = useState(0);
+	const [movies, setMovies] = useState([]);
 
 	const searchMovies = async (title) => {
 		// setRequestCount(requestCount + 1);
@@ -23,7 +24,7 @@ const MovieApp = () => {
 
 		const data = await response.json();
 
-		console.log(data.Search);
+		setMovies(data.Search);
 	};
 
 	useEffect(() => {
@@ -43,9 +44,20 @@ const MovieApp = () => {
 				/>
 				<img src={SearchIcon} alt="Search" onClick={() => {}} />
 			</div>
-			<div className="container">
-				<MovieCard movieData={testMovie} />
-			</div>
+
+			{movies.length > 0 ? (
+				<div className="container">
+					{movies.map((movie) => {
+						return <MovieCard movieData={movie} />;
+					})}
+				</div>
+			) : (
+				<div className="empty">
+					<h2>No movies found</h2>
+				</div>
+			)}
+
+			<div className="container"></div>
 		</div>
 	);
 };
