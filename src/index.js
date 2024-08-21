@@ -1,30 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import MovieApp from "./simpleApp/MovieApp";
-// import BudgetApp from "./reactHooks/budgetApp/BudgetApp";
-// import Hooks from "./reactHooks/hooks/Hooks";
-// import DashboardApp from "./reactHooks/tailwind/DashboardApp";
-// import HightlightEffects from "./highlighting/HighlightEffects";
-// import ComposerEngine from "./composerEngine/Experiment";
 import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const experimentToRun = process.env.REACT_APP_EXPERIMENT_SELECTION;
-console.log(process.env);
+// const experimentToRun = process.env.REACT_APP_EXPERIMENT_SELECTION;
+const experimentToRun = null;
 
 function experimentToRender(experiment) {
 	switch (experiment) {
 		case "movieApp":
+			const MovieApp = require("./simpleApp/MovieApp.jsx").default;
 			return <MovieApp />;
 		case "dashboardApp":
-			break;
+			const DashboardApp = require("./tailwind/DashboardApp").default;
+			return <DashboardApp />;
 		case "reactHooks":
-			break;
+			const Hooks = require("./reactHooks/Hooks").default;
+			return <Hooks />;
 		case "budgetApp":
-			break;
+			const BudgetApp = require("./budgetApp/BudgetApp.jsx").default;
+			return <BudgetApp />;
 		case "highlights":
-			break;
+			const HighlightEffects =
+				require("./highlights/HighlightEffects.jsx").default;
+			return <HighlightEffects />;
 		case "composerEngine":
-			break;
+			const ComposerEngine =
+				require("./composerEngine/ComposerEngine.jsx").default;
+			return <ComposerEngine />;
 		default:
 			return <p>No experiment found/selected</p>;
 	}
