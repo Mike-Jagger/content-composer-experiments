@@ -3,29 +3,29 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // const experimentToRun = process.env.REACT_APP_EXPERIMENT_SELECTION;
-const experimentToRun = null;
+const experimentToRun = "movieApp";
 
 function experimentToRender(experiment) {
 	switch (experiment) {
 		case "movieApp":
-			const MovieApp = require("./movieApp/MovieApp.jsx").default;
+			const MovieApp = require("./movieApp/MovieApp").default;
 			return <MovieApp />;
 		case "dashboardApp":
-			const DashboardApp = require("./tailwind/DashboardApp").default;
+			const DashboardApp = require("./dashboardApp/DashboardApp").default;
 			return <DashboardApp />;
 		case "reactHooks":
 			const Hooks = require("./reactHooks/Hooks").default;
 			return <Hooks />;
 		case "budgetApp":
-			const BudgetApp = require("./budgetApp/BudgetApp.jsx").default;
+			const BudgetApp = require("./budgetApp/BudgetApp").default;
 			return <BudgetApp />;
 		case "highlights":
 			const HighlightEffects =
-				require("./highlights/HighlightEffects.jsx").default;
+				require("./highlights/HighlightEffects").default;
 			return <HighlightEffects />;
 		case "composerEngine":
 			const ComposerEngine =
-				require("./composerEngine/ComposerEngine.jsx").default;
+				require("./composerEngine/ComposerEngine").default;
 			return <ComposerEngine />;
 		default:
 			return <p>No experiment found/selected</p>;
