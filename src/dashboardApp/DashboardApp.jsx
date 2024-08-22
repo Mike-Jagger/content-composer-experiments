@@ -2,15 +2,15 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/shared/Layout";
 import Dashboard from "./components/Dashboard";
-import Invoice from "./components/Invoice";
+import Products from "./components/Products";
 
 const DashboardApp = () => {
 	return (
 		<Router>
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					<Route path="/invoice" index={true} element={<Invoice />} />
-					<Route path="/dashboard" element={<Dashboard />} />
+					<Route path="/dashboard" index element={<Dashboard />} />
+					<Route path="/Products" element={<Products />} />
 				</Route>
 			</Routes>
 		</Router>
