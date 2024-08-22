@@ -1,7 +1,8 @@
 import React from "react";
+import Layout from "./components/shared/Layout";
 
 const DashboardApp = () => {
-	return <div className="text-3xl font-bold underline">DashboardApp</div>;
+	return <Layout />;
 };
 
 export default DashboardApp;
