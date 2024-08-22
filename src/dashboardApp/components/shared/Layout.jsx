@@ -1,23 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
-	return (
-		<Router>
-			<Routes>
-				<Route path="/" element={<h1>This is the main page</h1>}>
-					<Route
-						path="/invoices"
-						element={<h1>This is the page to display invoices</h1>}
-					/>
-					<Route
-						path="/dashboard"
-						element={<h1>Welcome to your dashboard</h1>}
-					/>
-				</Route>
-			</Routes>
-		</Router>
-	);
+	return <h1>This is the main layout</h1>;
 };
 
 export default Layout;
