@@ -1,5 +1,6 @@
 import React from "react";
 import { FcBullish } from "react-icons/fc";
+import { HiOutlineLogout } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
 import {
 	DASHBOARD_SIDEBAR_ROUTE_LINKS,
@@ -46,6 +47,13 @@ const Sidebar = () => {
 				{DASHBOARD_SIDEBAR_BOTTOM_LINKS.map((link) => {
 					return <SidebarLink key={link.key} link={link} />;
 				})}
+				<Link
+					className={`text-red-500  cursor-pointer ${linkClass}`}
+					to="/logout"
+				>
+					<HiOutlineLogout fontSize={25} />
+					<span>Logout</span>
+				</Link>
 			</div>
 		</div>
 	);
