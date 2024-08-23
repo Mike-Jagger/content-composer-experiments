@@ -5,7 +5,9 @@ const Products = () => {
 	return (
 		<>
 			<p>Products</p>
-			<Link to="/">Go to dashboard</Link>
+			<Link to="/" className="underline">
+				Go to dashboard
+			</Link>
 		</>
 	);
 };
