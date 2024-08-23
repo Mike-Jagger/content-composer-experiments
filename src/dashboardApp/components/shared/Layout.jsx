@@ -6,7 +6,7 @@ const Layout = () => {
 		<div>
 			<div className="sidebar">This is a sidebar</div>
 			<div className="searchbar">This is a searchbar</div>
-			<div className="content">{Outlet}</div>
+			<div>{<Outlet />}</div>
 		</div>
 	);
 };
