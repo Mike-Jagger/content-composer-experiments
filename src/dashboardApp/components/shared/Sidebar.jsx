@@ -11,7 +11,7 @@ let linkClass =
 
 function SidebarLink({ link }) {
 	const { pathname } = useLocation();
-	console.log(linkClass);
+
 	return (
 		<Link
 			className={`${
@@ -30,16 +30,23 @@ function SidebarLink({ link }) {
 const Sidebar = () => {
 	return (
 		<div className="flex flex-col bg-neutral-900 w-60 p-3">
-			<div className="flex flex-row items-center gap-2 px-1 py-3">
+			<Link
+				to="/"
+				className="flex flex-row items-center gap-2 px-1 py-3 hover:no-underline active:no-underline"
+			>
 				<FcBullish fontSize={24} />
 				<span className="text-neutral-200 text-lg">OpenShop</span>
-			</div>
-			<div className="flex flex-col flex-1 gap-0.5">
+			</Link>
+			<div className="flex flex-col flex-1 gap-0.5 mt-3">
 				{DASHBOARD_SIDEBAR_ROUTE_LINKS.map((link) => {
 					return <SidebarLink key={link.key} link={link} />;
 				})}
 			</div>
-			<div>bottom links</div>
+			<div className="flex flex-col gap-0.5 pt-2 border-t border-neutral-700">
+				{DASHBOARD_SIDEBAR_BOTTOM_LINKS.map((link) => {
+					return <SidebarLink key={link.key} link={link} />;
+				})}
+			</div>
 		</div>
 	);
 };
