@@ -5,9 +5,9 @@ import Searchbar from "./Searchbar";
 
 const Layout = () => {
 	return (
-		<div>
+		<div className="h-screen w-screen overflow-hidden bg-neutral-100 flex flex-row">
 			<Sidebar />
-			<div>
+			<div className="flex flex-col flex-1">
 				<Searchbar />
 				<div>{<Outlet />}</div>
 			</div>
