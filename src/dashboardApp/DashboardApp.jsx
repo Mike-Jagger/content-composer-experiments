@@ -12,6 +12,7 @@ const DashboardApp = () => {
 					<Route index element={<Dashboard />} />
 					<Route path="/products" element={<Products />} />
 				</Route>
+				<Route path="/login" element={<p>Login page</p>} />
 			</Routes>
 		</Router>
 	);
