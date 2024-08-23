@@ -9,8 +9,8 @@ const DashboardApp = () => {
 		<Router>
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					<Route path="/dashboard" index element={<Dashboard />} />
-					<Route path="/Products" element={<Products />} />
+					<Route index element={<Dashboard />} />
+					<Route path="/products" element={<Products />} />
 				</Route>
 			</Routes>
 		</Router>
