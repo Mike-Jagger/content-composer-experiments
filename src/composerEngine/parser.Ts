@@ -112,6 +112,6 @@
         the different subsections (for example, in blog posts list, go to new line before starting a new blogpost section to differentiate between posts)
 
         The essence is that each of the sections defined by the admin are just combos of the base components of the web defined in the notes.md file. These core components,
-        when stylized and combined, give the custom components defined by the admin. Which brings us to the next part of our discussion; STYLING 
+        when stylized and combined, give the custom components defined by the admin. Which brings us to the next part of our discussion; STYLES (there after; composing, and finally; rendering) 
 
 */
